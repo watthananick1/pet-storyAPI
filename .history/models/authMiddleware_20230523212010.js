@@ -1,0 +1,22 @@
+import jwt from 'jsonwebtoken';
+
+const validateToken = (req, res, next) => {
+  const token = req.headers.authorization;
+
+  if (token) {
+    // Verify the token
+    jwt.verify(token, 'your_secret_key', (err, decodedToken) => {
+      if (err) {
+        return res.status(401).json({ error: 'Invalid token' });
+      } else {
+        // Store the decoded token in the request object
+        req.user = decodedToken;
+        next();
+      }
+    });
+  } else {
+    return res.status(401).json({ error: 'Token not provided' });
+  }
+};
+
+export default validateToken;
