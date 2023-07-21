@@ -9,15 +9,15 @@ import bodyParser from "body-parser";
 import { Server as SocketIOServer } from "socket.io";
 import cors from "cors";
 
-import usersRouter from './routes/users.js';
-import authRoute from './routes/auth.js';
-import postRoute from './routes/posts.js';
-import commentRoute from './routes/comments.js';
-import typePetRoute from './routes/typePets.js';
-import searchRoute from './routes/search.js';
-import reportRoute from './routes/report.js';
+import usersRouter require('./routes/users');
+import authRoute require('./routes/users');
+import postRoute require('./routes/users');
+import commentRoute require('./routes/users');
+import typePetRoute require('./routes/users');
+import searchRoute require('./routes/users');
+import reportRoute require('./routes/users');
 
-import validateToken from "models/authMiddleware.js";
+import validateToken require('models/authMiddleware.js');
 
 const app = express();
 const server = app.listen(4000, () => {
