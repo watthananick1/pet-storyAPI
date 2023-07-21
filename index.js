@@ -9,13 +9,13 @@ import bodyParser from "body-parser";
 import { Server as SocketIOServer } from "socket.io";
 import cors from "cors";
 
-import usersRouter from './routes/users';
-import authRoute from './routes/auth';
-import postRoute from './routes/posts';
-import commentRoute from './routes/comments';
-import typePetRoute from './routes/typePets';
-import searchRoute from './routes/search';
-import reportRoute from './routes/report';
+import usersRouter from './routes/users.js';
+import authRoute from './routes/auth.js';
+import postRoute from './routes/posts.js';
+import commentRoute from './routes/comments.js';
+import typePetRoute from './routes/typePets.js';
+import searchRoute from './routes/search.js';
+import reportRoute from './routes/report.js';
 
 import validateToken from 'models/authMiddleware.js';
 
