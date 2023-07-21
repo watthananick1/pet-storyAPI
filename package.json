@@ -4,7 +4,7 @@
   "description": "pet-story",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec ./node_modules/.bin/babel-node -- index.js",
+    "start": "nodemon index.js"",
     "dev": "nodemon index.js"
   },
   "author": "",
